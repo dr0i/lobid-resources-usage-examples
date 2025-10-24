@@ -4,6 +4,11 @@
 # Lookup every one of these alma IDs to get the MARC-XML data.
 # Write those single MARC-XML data lookups into one valid XML file.
 #
+# duration (Laptop from 2017):
+# - 13s to get lobid data
+# - 70s extract alma IDs
+# - 14m get 5k MARC XML
+#
 # preconditions:
 # apt install jq
 
@@ -38,7 +43,7 @@ echo "Start getMarcXml :$(date)"
     do curl  --silent "https://lobid.org/marcxml/$i" >> $FILE_MARCXML
        echo "" >> $FILE_MARCXML
   done
-  echo "</records" >>  $FILE_MARCXML
+  echo "</records>" >>  $FILE_MARCXML
 echo "Ende getMarcXml: $(date)"
 }
 
