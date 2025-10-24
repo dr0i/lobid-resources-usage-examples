@@ -17,7 +17,7 @@ IFS="
 
 FILE_LOBID=lobidData.jsonl.gz
 FILE_ALMAID=almaId.csv
-FILE_MARCXML=lobidDataMarc.xml
+FILE_MARCXML=lobid2Judaica.mrc.xml
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' > $FILE_MARCXML
 echo "<records>" >> $FILE_MARCXML
